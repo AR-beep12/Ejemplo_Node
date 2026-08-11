@@ -1,10 +1,23 @@
 export const equiposService = {
 
   async getEquipos() {
-    return [
-      { id: 1, name: "Equipo 1" },
-      { id: 2, name: "Equipo 2" },
-    ];
+    
+  },
+
+  async getEquiposById(id) {
+    
+  },
+
+  async postEquipos() {
+    
+  },
+
+  async patchEquipos(id) {
+    
+  },
+
+  async deleteEquipos(id) {
+    
   },
   
 };
