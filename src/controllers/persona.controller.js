@@ -27,12 +27,13 @@ export const postPersonas = async (req, res) => {
 };
 
 export const patchPersonas = async (req, res) => {
-    const persona = await personasService.patchPersonas(req.body);
-    res.json(persona);
+  const { id } = req.params;
+  const persona = await personasService.patchPersonas(id, req.body);
+  res.json(persona);
 };
 
 export const deletePersonas = async (req, res) => {
-    const { id } = req.params;
-    const persona = await personasService.deletePersonas(id);
-    res.json(persona);
+  const { id } = req.params;
+  const persona = await personasService.deletePersonas(id);
+  res.json(persona);
 };

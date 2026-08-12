@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getJugadores , getArbitros, postPersonas, getPersonasById, patchPersonas, deletePersonas, patchPersonas } from "../controllers/persona.controller.js";
+import { getJugadores, getArbitros, postPersonas, getPersonasById, patchPersonas, deletePersonas } from "../controllers/persona.controller.js";
 
 const router = Router();
 

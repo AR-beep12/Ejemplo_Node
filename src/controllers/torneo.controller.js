@@ -17,7 +17,8 @@ export const postTorneos = async (req, res) => {
 };
 
 export const patchTorneos = async (req, res) => {
-    const torneos = await torneosService.patchTorneos(req.body);
+    const { id } = req.params;
+    const torneos = await torneosService.patchTorneos(id, req.body);
     res.json(torneos);
 };
 
