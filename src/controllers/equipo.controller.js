@@ -12,18 +12,17 @@ export const getEquiposById = async (req, res) => {
 };
 
 export const postEquipos = async (req, res) => {
-    const equipo = await equiposService.postEquipos();
+    const equipo = await equiposService.postEquipos(req.body);
     res.json(equipo);
 };
 
 export const patchEquipos = async (req, res) => {
-    const { id } = req.params;
-    const equipo = await equiposService.patchEquipos();
+    const equipo = await equiposService.patchEquipos(req.body);
     res.json(equipo);
 };
 
 export const deleteEquipos = async (req, res) => {
     const { id } = req.params;
-    const equipo = await equiposService.deleteEquipos();
+    const equipo = await equiposService.deleteEquipos(id);
     res.json(equipo);
 };
